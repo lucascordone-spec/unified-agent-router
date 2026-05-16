@@ -1,0 +1,60 @@
+---
+title: Unified Agent Router
+description: Aggregates 1inch and Rango Exchange simultaneously to always return the best DeFi swap/bridge route for any token pair. Built for AI agents.
+keywords: [defi, swap, bridge, cross-chain, 1inch, rango, routing, aggregator, mcp]
+---
+
+# plugin-unified-router
+
+The **Unified Agent Router** is a DeFi routing aggregator plugin built specifically for AI agents running on ElizaOS. Instead of relying on a single DEX aggregator, it queries **1inch** and **Rango Exchange** simultaneously and returns the best route — saving your agent money on every swap.
+
+## What it does
+
+- 🔀 **Aggregates 1inch + Rango Exchange** in parallel for every request
+- ⛓️ **Cross-chain routing** across 10+ EVM networks (Arbitrum, Base, Optimism, Polygon, Ethereum, BNB Chain, etc.)
+- 💸 **Best price guaranteed** — automatically selects the route with the highest net output after gas
+- ✅ **Transaction ready** — returns signed-ready `calldata` and `to` / `value` fields
+- 🤖 **MCP-compatible** — also available as a Smithery MCP server for Claude, Cursor, and other MCP clients
+
+## Installation
+
+```bash
+npx @smithery/cli install @lucascordone-spec/unified-agent-router --client claude
+```
+
+Or as an ElizaOS plugin:
+
+```bash
+npm install @elizaos/plugin-unified-router
+```
+
+## Usage in your agent
+
+```typescript
+import { unifiedRouterPlugin } from "@elizaos/plugin-unified-router";
+
+export default {
+  plugins: [unifiedRouterPlugin],
+};
+```
+
+Your agent will now respond to natural language swap requests like:
+- *"Swap 1000 USDC to ETH on Arbitrum"*
+- *"Bridge my USDC from Arbitrum to Base, find the best route"*
+- *"What's the best route for 500 USDT → MATIC on Polygon?"*
+
+## Available Actions
+
+| Action | Similes | Description |
+|--------|---------|-------------|
+| `GET_BEST_ROUTE` | `SWAP_TOKENS`, `BRIDGE_TOKENS`, `CROSS_CHAIN_SWAP`, `GET_SWAP_QUOTE` | Queries all aggregators and returns the best route with transaction data |
+
+## Supported Networks
+
+Arbitrum, Base, Optimism, Ethereum Mainnet, Polygon, BNB Chain, Avalanche, Fantom, zkSync Era, Linea and more via 1inch and Rango.
+
+## Links
+
+- **GitHub**: https://github.com/lucascordone-spec/unified-agent-router
+- **Smithery**: https://smithery.ai/server/@lucascordone-spec/unified-agent-router
+- **MCP Install**: `npx @smithery/cli install @lucascordone-spec/unified-agent-router --client claude`

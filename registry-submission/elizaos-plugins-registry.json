@@ -1,0 +1,7 @@
+{
+  "name": "@elizaos/plugin-unified-router",
+  "description": "Unified DeFi Router: Aggregates 1inch and Rango Exchange simultaneously to always return the best swap/bridge route for any token pair across 10+ chains. Zero config for agents.",
+  "gitHubUrl": "https://github.com/lucascordone-spec/unified-agent-router",
+  "npm": "https://www.npmjs.com/package/@elizaos/plugin-unified-router",
+  "tags": ["defi", "swap", "bridge", "cross-chain", "1inch", "rango", "routing", "aggregator"]
+}
