@@ -1,0 +1,24 @@
+{
+  "name": "@elizaos/plugin-unified-router",
+  "version": "1.0.0",
+  "description": "Unified DeFi Router plugin for ElizaOS. Aggregates 1inch and Rango for the best swap/bridge routes.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["eliza", "plugin", "defi", "swap", "bridge", "1inch", "rango", "routing"],
+  "author": "lucascordone-spec",
+  "license": "MIT",
+  "peerDependencies": {
+    "@elizaos/core": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
