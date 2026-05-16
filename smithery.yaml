@@ -1,0 +1,25 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties:
+      ONEINCH_API_KEY:
+        type: string
+        description: "API Key for 1inch (Optional for basic features, required for 1inch routes)"
+      RANGO_API_KEY:
+        type: string
+        description: "API Key for Rango Exchange (Optional)"
+      LIFI_API_KEY:
+        type: string
+        description: "API Key for LI.FI (Optional)"
+  commandFunction: |
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        ONEINCH_API_KEY: config.ONEINCH_API_KEY || '',
+        RANGO_API_KEY: config.RANGO_API_KEY || '',
+        LIFI_API_KEY: config.LIFI_API_KEY || ''
+      }
+    })
