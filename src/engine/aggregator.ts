@@ -1,6 +1,13 @@
-import { getLifiQuote, RouteQuote } from "../services/lifi.service.js";
 import { get1inchQuote } from "../services/1inch.service.js";
 import { getRangoQuote } from "../services/rango.service.js";
+
+export interface RouteQuote {
+    aggregator: string;
+    transactionData: any;
+    expectedOutput: string;
+    gasCostUsd: number;
+    routeData: any;
+}
 
 export async function getBestUnifiedRoute(
     fromChainId: number,
