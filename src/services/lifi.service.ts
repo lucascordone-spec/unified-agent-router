@@ -29,8 +29,8 @@ export async function getLifiQuote(
                 toToken: toToken,
                 fromAmount: amount,
                 fromAddress: userAddress,
-                fee: 0.0002, // 0.02% Fee
-                integrator: feeWalletAddress // El integrator recibe el fee en LI.FI
+                fee: 0.0002, // 0.02% protocol fee
+                integrator: "unified-router-bot" // LIFI integrator string (max 23 chars). El fee va al owner de este integrator ID.
             }
         });
 

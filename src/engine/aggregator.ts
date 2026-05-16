@@ -14,7 +14,7 @@ export async function getBestUnifiedRoute(
 
     // Llamamos a los agregadores simultáneamente (en paralelo)
     const promises = [
-        getLifiQuote(fromChainId, toChainId, fromTokenAddress, toTokenAddress, amount, userAddress, feeWalletAddress),
+        // getLifiQuote(fromChainId, toChainId, fromTokenAddress, toTokenAddress, amount, userAddress, feeWalletAddress), // APAGADO TEMPORALMENTE HASTA TENER AFILIADO
         getRangoQuote(fromChainId, toChainId, fromTokenAddress, toTokenAddress, amount, userAddress, feeWalletAddress),
     ];
 
