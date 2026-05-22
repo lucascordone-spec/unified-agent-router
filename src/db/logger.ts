@@ -14,6 +14,7 @@ export interface RouteLog {
     toToken: string;
     volumeUsd: number;
     projectedProfitUsd: number;
+    userAddress: string;
 }
 
 export interface DashboardStats {
@@ -35,28 +36,58 @@ function initDb() {
     }
 }
 
-export function logRoute(aggregator: string, fromToken: string, toToken: string, volumeUsd: number) {
-    initDb();
-    const data = fs.readFileSync(DB_PATH, 'utf-8');
-    const stats: DashboardStats = JSON.parse(data);
+let isWriting = false;
+const writeQueue: Array<() => void> = [];
 
-    const projectedProfitUsd = volumeUsd * 0.0002; // 0.02%
+function acquireLock(): Promise<void> {
+    if (!isWriting) {
+        isWriting = true;
+        return Promise.resolve();
+    }
+    return new Promise((resolve) => {
+        writeQueue.push(resolve);
+    });
+}
 
-    const newLog: RouteLog = {
-        timestamp: new Date().toISOString(),
-        aggregator,
-        fromToken,
-        toToken,
-        volumeUsd,
-        projectedProfitUsd
-    };
+function releaseLock() {
+    if (writeQueue.length > 0) {
+        const next = writeQueue.shift();
+        if (next) {
+            next();
+            return;
+        }
+    }
+    isWriting = false;
+}
 
-    stats.logs.push(newLog);
-    stats.totalVolumeUsd += volumeUsd;
-    stats.totalProfitUsd += projectedProfitUsd;
-    stats.routesGenerated += 1;
+export async function logRoute(aggregator: string, fromToken: string, toToken: string, volumeUsd: number, userAddress: string) {
+    await acquireLock();
+    try {
+        initDb();
+        const data = fs.readFileSync(DB_PATH, 'utf-8');
+        const stats: DashboardStats = JSON.parse(data);
 
-    fs.writeFileSync(DB_PATH, JSON.stringify(stats, null, 2));
+        const projectedProfitUsd = volumeUsd * 0.0002; // 0.02%
+
+        const newLog: RouteLog = {
+            timestamp: new Date().toISOString(),
+            aggregator,
+            fromToken,
+            toToken,
+            volumeUsd,
+            projectedProfitUsd,
+            userAddress
+        };
+
+        stats.logs.push(newLog);
+        stats.totalVolumeUsd += volumeUsd;
+        stats.totalProfitUsd += projectedProfitUsd;
+        stats.routesGenerated += 1;
+
+        fs.writeFileSync(DB_PATH, JSON.stringify(stats, null, 2));
+    } finally {
+        releaseLock();
+    }
 }
 
 export function getStats(): DashboardStats {

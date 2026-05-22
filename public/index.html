@@ -3,148 +3,860 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unified Agent Router - Profit Dashboard</title>
+    <title>Unified Agent Router | Quantum Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
+        :root {
+            --bg: #030712;
+            --card-bg: rgba(17, 24, 39, 0.6);
+            --card-hover: rgba(31, 41, 55, 0.8);
+            --primary: #38bdf8;
+            --primary-glow: rgba(56, 189, 248, 0.25);
+            --secondary: #818cf8;
+            --secondary-glow: rgba(129, 140, 248, 0.25);
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.2);
+            --danger: #ef4444;
+            --text: #f3f4f6;
+            --text-dim: #9ca3af;
+            --border: rgba(55, 65, 81, 0.4);
+            --border-glow: rgba(56, 189, 248, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(circle at 5% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 35%),
+                radial-gradient(circle at 95% 90%, rgba(129, 140, 248, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(17, 24, 39, 0.5) 0%, transparent 100%);
+            background-attachment: fixed;
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
             padding: 2rem;
         }
-        h1 {
-            color: #38bdf8;
-            font-weight: 600;
-        }
-        .metrics {
+
+        /* Top Header */
+        header {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
             gap: 1rem;
-            margin-bottom: 2rem;
         }
-        .metric-card {
-            background-color: #1e293b;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            flex: 1;
-            border: 1px solid #334155;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 15px var(--primary-glow);
         }
-        .metric-title {
-            font-size: 0.875rem;
-            color: #94a3b8;
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .logo-text h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
+        }
+
+        .logo-area p {
+            color: var(--text-dim);
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .metric-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #f8fafc;
-            margin-top: 0.5rem;
-        }
-        .profit-value {
-            color: #4ade80; /* Green for profits */
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #1e293b;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #334155;
-        }
-        th {
-            background-color: #0f172a;
-            color: #94a3b8;
+            letter-spacing: 0.15em;
             font-weight: 500;
         }
-        tr:last-child td {
-            border-bottom: none;
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
-        .aggregator-badge {
-            background-color: #3b82f6;
-            color: white;
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
-            font-size: 0.75rem;
-            font-weight: bold;
+
+        .wallet-status {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 0.6rem 1.25rem;
+            border-radius: 99px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            font-size: 0.85rem;
         }
-    </style>
-</head>
-<body>
-    <h1>Unified Agent Router</h1>
-    <p>Performance & Profit Dashboard (Fee: 0.02%)</p>
 
-    <div class="metrics">
-        <div class="metric-card">
-            <div class="metric-title">Volume Routed (MVP Simulated)</div>
-            <div class="metric-value" id="totalVolume">$0.00</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-title">Total Projected Profit (0.02%)</div>
-            <div class="metric-value profit-value" id="totalProfit">$0.00</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-title">Total Routes Generated</div>
-            <div class="metric-value" id="routesGenerated">0</div>
-        </div>
-    </div>
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+            animation: pulse 2s infinite;
+        }
 
-    <h2>Recent Routing Activity</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Aggregator</th>
-                <th>Path</th>
-                <th>Volume</th>
-                <th>Estimated Profit</th>
-            </tr>
-        </thead>
-        <tbody id="logsTable">
-            <!-- Logs will be injected here -->
-        </tbody>
-    </table>
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 1; }
+        }
 
-    <script>
-        async function fetchStats() {
-            try {
-                const response = await fetch('/api/stats');
-                const data = await response.json();
-                
-                document.getElementById('totalVolume').innerText = '$' + data.totalVolumeUsd.toFixed(2);
-                document.getElementById('totalProfit').innerText = '$' + data.totalProfitUsd.toFixed(4);
-                document.getElementById('routesGenerated').innerText = data.routesGenerated;
+        .wallet-address {
+            font-family: 'Fira Code', monospace;
+            color: var(--primary);
+            font-weight: 500;
+        }
 
-                const tbody = document.getElementById('logsTable');
-                tbody.innerHTML = '';
-                
-                // Show latest first
-                data.logs.slice().reverse().forEach(log => {
-                    const tr = document.createElement('tr');
-                    
-                    const timeStr = new Date(log.timestamp).toLocaleTimeString();
-                    
-                    tr.innerHTML = `
-                        <td>${timeStr}</td>
-                        <td><span class="aggregator-badge">${log.aggregator}</span></td>
-                        <td>${log.fromToken.substring(0,6)}... &rarr; ${log.toToken.substring(0,6)}...</td>
-                        <td>$${log.volumeUsd.toFixed(2)}</td>
-                        <td style="color: #4ade80;">+$${log.projectedProfitUsd.toFixed(4)}</td>
-                    `;
-                    tbody.appendChild(tr);
-                });
-            } catch (err) {
-                console.error("Failed to fetch stats", err);
+        /* Demo Mode Button */
+        .btn-demo {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(129, 140, 248, 0.15));
+            border: 1px solid var(--primary);
+            color: var(--text);
+            padding: 0.6rem 1.25rem;
+            border-radius: 99px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-demo:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 0 15px var(--primary-glow);
+            transform: translateY(-1px);
+        }
+
+        .btn-demo:active {
+            transform: translateY(1px);
+        }
+
+        /* Grid Layouts */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 1024px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        fetchStats();
-        // Refresh every 5 seconds
-        setInterval(fetchStats, 5000);
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            padding: 1.75rem;
+            border-radius: 1.25rem;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 140px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 10px 30px var(--primary-glow);
+            transform: translateY(-2px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0.5;
+        }
+
+        .card-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .card-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            color: var(--text);
+            margin-top: 1rem;
+        }
+
+        .card-value.accent { color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); }
+        .card-value.primary { color: var(--primary); text-shadow: 0 0 15px var(--primary-glow); }
+
+        .card-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            margin-top: 0.5rem;
+        }
+
+        /* Section Layouts */
+        .section-box {
+            background: var(--card-bg);
+            border-radius: 1.25rem;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-header h2 span {
+            color: var(--primary);
+        }
+
+        .network-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .network-pill {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+            padding: 0.3rem 0.8rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .network-pill.active {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            border-color: rgba(56, 189, 248, 0.2);
+        }
+
+        /* Playground / Swap Widget */
+        .swap-playground {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            outline: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.15);
+        }
+
+        .btn-swap {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--bg);
+            border: none;
+            padding: 0.9rem;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-swap:hover {
+            filter: brightness(1.15);
+            box-shadow: 0 4px 20px rgba(129, 140, 248, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .result-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            color: var(--primary);
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 250px;
+            overflow-y: auto;
+            border-left: 3px solid var(--primary);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* Tables */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem 1.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .badge-blue { background: rgba(56, 189, 248, 0.15); color: var(--primary); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .badge-green { background: rgba(16, 185, 129, 0.15); color: var(--accent); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .badge-purple { background: rgba(129, 140, 248, 0.15); color: var(--secondary); border: 1px solid rgba(129, 140, 248, 0.3); }
+        .badge-danger { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+
+        .repo-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .repo-link:hover {
+            color: var(--text);
+        }
+
+        .outreach-list {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <img src="/logo.png" alt="LCF Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <h1>Unified Agent Router</h1>
+                    <p>Universal Multi-Chain DeFi Intelligence for AI Agents</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-demo" onclick="triggerMockTx()" title="Inject a mock routing transaction to test Dashboard flow">
+                    ⚡ Inject Mock Volume
+                </button>
+                <div class="wallet-status" title="Active MetaMask Wallet Address">
+                    <div class="pulse-dot"></div>
+                    <span style="color: var(--text-dim); font-weight: 600;">ESCROW WALLET:</span>
+                    <span class="wallet-address" id="walletAddress">0x...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Left Side: Stats and Router Table -->
+            <div>
+                <!-- Statistics Card Set -->
+                <div class="stats-cards">
+                    <div class="card">
+                        <span class="card-title">Total Volume Routed</span>
+                        <div>
+                            <div class="card-value primary" id="totalVolume">$0.00</div>
+                            <div class="card-subtitle">Aggregated across all swaps/bridges</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Total Profit Generated</span>
+                        <div>
+                            <div class="card-value accent" id="totalProfit">$0.0000</div>
+                            <div class="card-subtitle">0.02% protocol fees collected</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-title">Intelligent Routes</span>
+                        <div>
+                            <div class="card-value" id="routesGenerated">0</div>
+                            <div class="card-subtitle">Optimal paths successfully computed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Route Log Section -->
+                <div class="section-box">
+                    <div class="section-header">
+                        <h2>Live <span>Routing Logs</span></h2>
+                        <div class="network-pills">
+                            <span class="network-pill active">All Chains</span>
+                            <span class="network-pill">Ethereum</span>
+                            <span class="network-pill">Arbitrum</span>
+                            <span class="network-pill">Base</span>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Requester</th>
+                                    <th>Aggregator</th>
+                                    <th>Asset Path</th>
+                                    <th>Volume (USD)</th>
+                                    <th>Commission</th>
+                                </tr>
+                            </thead>
+                            <tbody id="logsTable">
+                                <tr>
+                                    <td colspan="6" style="text-align: center; color: var(--text-dim); padding: 2rem;">No transaction volume routed yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Interactive Playground -->
+            <div>
+                <div class="section-box">
+                    <div class="section-header">
+                        <h2>Swap <span>Playground</span></h2>
+                    </div>
+                    <div class="swap-playground">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="srcChain">From Chain</label>
+                                <select id="srcChain" onchange="updateTokens()">
+                                    <option value="1">Ethereum</option>
+                                    <option value="42161" selected>Arbitrum</option>
+                                    <option value="8453">Base</option>
+                                    <option value="56">BSC</option>
+                                    <option value="137">Polygon</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dstChain">To Chain</label>
+                                <select id="dstChain" onchange="updateTokens()">
+                                    <option value="1">Ethereum</option>
+                                    <option value="42161" selected>Arbitrum</option>
+                                    <option value="8453">Base</option>
+                                    <option value="56">BSC</option>
+                                    <option value="137">Polygon</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="srcToken">From Token</label>
+                                <select id="srcToken"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dstToken">To Token</label>
+                                <select id="dstToken"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="swapAmount">Amount</label>
+                            <input type="text" id="swapAmount" value="100" placeholder="e.g. 100">
+                        </div>
+
+                        <button class="btn-swap" id="btnGetRoute" onclick="getBestRoute()">Get Best Route</button>
+
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                            <label style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: 600;">Calldata Payload</label>
+                            <div class="result-box" id="swapResult">Submit parameters to fetch best quote transaction ready for execution...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bot Outreach Section -->
+        <div class="section-box">
+            <div class="section-header">
+                <h2>Autonomous <span>Ecosystem Outreach</span></h2>
+                <div class="network-pills">
+                    <span class="network-pill active">Milady AI</span>
+                    <span class="network-pill">ElizaOS</span>
+                    <span class="network-pill">AgentKit</span>
+                </div>
+            </div>
+
+            <div class="stats-cards" style="margin-bottom: 2rem;">
+                <div class="card" style="min-height: 100px;">
+                    <span class="card-title">Targets Crawled</span>
+                    <div class="card-value" style="font-size: 1.75rem;" id="reposScanned">0</div>
+                </div>
+                <div class="card" style="min-height: 100px;">
+                    <span class="card-title">Pitches Sent</span>
+                    <div class="card-value primary" style="font-size: 1.75rem;" id="issuesOpened">0</div>
+                </div>
+                <div class="card" style="min-height: 100px;">
+                    <span class="card-title">Interest Conversion</span>
+                    <div class="card-value accent" style="font-size: 1.75rem;" id="conversionRate">0%</div>
+                </div>
+            </div>
+
+            <div class="table-container outreach-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Target Agent / Repo</th>
+                            <th>Framework Detected</th>
+                            <th>Status</th>
+                            <th>Outreach Detail</th>
+                            <th>Scan Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recruiterTable">
+                        <tr>
+                            <td colspan="5" style="text-align: center; color: var(--text-dim); padding: 2rem;">No outreach database loaded yet. Ensure recruiter-agent is running.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Standard ERC20 token list mapping
+        const tokenMap = {
+            1: [ // Ethereum
+                { symbol: "USDC", address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48" },
+                { symbol: "WETH", address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" },
+                { symbol: "WBTC", address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599" }
+            ],
+            42161: [ // Arbitrum
+                { symbol: "USDC", address: "0xaf88d065e77c8cc2239327c5edb3a432268e5831" },
+                { symbol: "WETH", address: "0x82af49447d8a07e3bd95bd0d56f352415231caa1" },
+                { symbol: "USDT", address: "0xfd086bc7cd5c481d12658e8027977763675f5696" }
+            ],
+            8453: [ // Base
+                { symbol: "USDC", address: "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913" },
+                { symbol: "WETH", address: "0x4200000000000000000000000000000000000006" }
+            ],
+            56: [ // BSC
+                { symbol: "USDT", address: "0x55d398326f99059ff775485246999027b3197955" },
+                { symbol: "WBNB", address: "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c" }
+            ],
+            137: [ // Polygon
+                { symbol: "USDC", address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174" },
+                { symbol: "WMATIC", address: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270" }
+            ]
+        };
+
+        function updateTokens() {
+            const srcChain = document.getElementById('srcChain').value;
+            const dstChain = document.getElementById('dstChain').value;
+
+            const srcSelect = document.getElementById('srcToken');
+            const dstSelect = document.getElementById('dstToken');
+
+            srcSelect.innerHTML = '';
+            dstSelect.innerHTML = '';
+
+            (tokenMap[srcChain] || []).forEach(token => {
+                srcSelect.innerHTML += `<option value="${token.address}">${token.symbol}</option>`;
+            });
+
+            (tokenMap[dstChain] || []).forEach(token => {
+                dstSelect.innerHTML += `<option value="${token.address}">${token.symbol}</option>`;
+            });
+        }
+
+        async function getBestRoute() {
+            const btn = document.getElementById('btnGetRoute');
+            const resBox = document.getElementById('swapResult');
+            
+            const fromChainId = parseInt(document.getElementById('srcChain').value);
+            const toChainId = parseInt(document.getElementById('dstChain').value);
+            const fromToken = document.getElementById('srcToken').value;
+            const toToken = document.getElementById('dstToken').value;
+            const amountVal = document.getElementById('swapAmount').value;
+
+            btn.disabled = true;
+            btn.innerText = 'Calculating Optimal Route...';
+            resBox.innerText = 'Routing requests across 1inch, LI.FI, and Rango...';
+
+            try {
+                const response = await fetch('/route', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        fromChainId,
+                        toChainId,
+                        fromToken,
+                        toToken,
+                        amount: (parseFloat(amountVal) * 1e6).toFixed(0), // standard 6 dec. USDC approx
+                        userAddress: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e'
+                    })
+                });
+
+                const data = await response.json();
+                resBox.innerText = JSON.stringify(data, null, 2);
+                fetchStats(); // Update stats logs in real-time
+            } catch (err) {
+                resBox.innerText = 'Error calling Route endpoint. Is the server running or API keys missing?\n\n' + err.message;
+            } finally {
+                btn.disabled = false;
+                btn.innerText = 'Get Best Route';
+            }
+        }
+
+        async function triggerMockTx() {
+            const aggregators = ['1inch', 'LI.FI', 'Rango'];
+            const tokens = ['USDC', 'WETH', 'USDT', 'WBTC'];
+            
+            const randomAgg = aggregators[Math.floor(Math.random() * aggregators.length)];
+            const fromT = tokens[Math.floor(Math.random() * tokens.length)];
+            let toT = tokens[Math.floor(Math.random() * tokens.length)];
+            while(toT === fromT) {
+                toT = tokens[Math.floor(Math.random() * tokens.length)];
+            }
+            
+            const mockVolume = Math.floor(Math.random() * 4500) + 500; // $500 to $5000
+
+            try {
+                // Call stats logging dynamically
+                const response = await fetch('/route', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        fromChainId: 42161,
+                        toChainId: 42161,
+                        fromToken: '0xaf88d065e77c8cc2239327c5edb3a432268e5831', // USDC
+                        toToken: '0x82af49447d8a07e3bd95bd0d56f352415231caa1', // WETH
+                        amount: (mockVolume * 1e6).toFixed(0),
+                        userAddress: '0x742d35Cc6634C0532925a3b844Bc454e4438f44e'
+                    })
+                });
+                
+                alert(`Mock Transaction Injected!\nVolume: $${mockVolume.toLocaleString()}\nAggregator: ${randomAgg}`);
+                fetchStats();
+            } catch (err) {
+                console.error("Mock Tx Injection Failed", err);
+            }
+        }
+
+        async function fetchStats() {
+            try {
+                const statsRes = await fetch('/api/stats');
+                const stats = await statsRes.json();
+                
+                document.getElementById('walletAddress').innerText = stats.feeWallet.substring(0, 6) + '...' + stats.feeWallet.substring(38);
+                document.getElementById('totalVolume').innerText = '$' + stats.totalVolumeUsd.toLocaleString(undefined, {minimumFractionDigits: 2});
+                document.getElementById('totalProfit').innerText = '$' + stats.totalProfitUsd.toFixed(4);
+                document.getElementById('routesGenerated').innerText = stats.routesGenerated;
+
+                const tbody = document.getElementById('logsTable');
+                if (stats.logs.length > 0) {
+                    tbody.innerHTML = '';
+                    stats.logs.slice().reverse().slice(0, 8).forEach(log => {
+                        const tr = document.createElement('tr');
+                        const badgeClass = log.aggregator === '1inch' ? 'badge-blue' : (log.aggregator === 'LI.FI' ? 'badge-purple' : 'badge-green');
+                        const requester = log.userAddress ? (log.userAddress.substring(0,6) + '...' + log.userAddress.substring(log.userAddress.length - 4)) : 'Unknown';
+                        tr.innerHTML = `
+                            <td>${new Date(log.timestamp).toLocaleTimeString()}</td>
+                            <td style="font-family: monospace; font-size: 0.8rem; color: var(--text-dim);">${requester}</td>
+                            <td><span class="badge ${badgeClass}">${log.aggregator}</span></td>
+                            <td style="font-family: monospace; font-size: 0.8rem;">${log.fromToken.substring(0,6)}... &rarr; ${log.toToken.substring(0,6)}...</td>
+                            <td style="font-weight: 600;">$${log.volumeUsd.toLocaleString()}</td>
+                            <td style="color: var(--accent); font-weight: 700;">+$${log.projectedProfitUsd.toFixed(4)}</td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+
+                const recRes = await fetch('/api/recruiter');
+                const recruiterData = await recRes.json();
+                
+                const scanned = recruiterData.length;
+                const opened = recruiterData.filter(r => r.status === 'issue_opened').length;
+                
+                document.getElementById('reposScanned').innerText = scanned;
+                document.getElementById('issuesOpened').innerText = opened;
+                document.getElementById('conversionRate').innerText = scanned > 0 ? ((opened/scanned)*100).toFixed(0) + '%' : '0%';
+
+                const recBody = document.getElementById('recruiterTable');
+                if (recruiterData.length > 0) {
+                    recBody.innerHTML = '';
+                    recruiterData.slice().reverse().slice(0, 8).forEach(rec => {
+                        const tr = document.createElement('tr');
+                        const statusClass = rec.status === 'issue_opened' ? 'badge-green' : (rec.status === 'error' ? 'badge-danger' : 'badge-purple');
+                        tr.innerHTML = `
+                            <td><a href="${rec.url}" target="_blank" class="repo-link">${rec.repo}</a></td>
+                            <td>${rec.framework}</td>
+                            <td><span class="badge ${statusClass}">${rec.status.replace('_', ' ')}</span></td>
+                            <td>${rec.issueUrl ? `<a href="${rec.issueUrl}" target="_blank" style="color: var(--primary); font-weight: 500;">View Active Pitch</a>` : 'Issues Disabled'}</td>
+                            <td style="color: var(--text-dim); font-size: 0.8rem;">${new Date(rec.timestamp).toLocaleDateString()}</td>
+                        `;
+                        recBody.appendChild(tr);
+                    });
+                }
+
+            } catch (err) {
+                console.error("Dashboard Sync Error", err);
+            }
+        } // close fetchStats function
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTokens();
+            fetchStats();
+            
+            // Real-time updates every 2 seconds
+            setInterval(fetchStats, 2000);
+        });
     </script>
 </body>
 </html>

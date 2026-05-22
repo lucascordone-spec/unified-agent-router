@@ -7,8 +7,9 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node-esm src/index.ts",
-    "dashboard": "npm run build && node dist/dashboard.js"
+    "dev": "tsx src/index.ts",
+    "dashboard": "npm run build && node dist/dashboard.js",
+    "dashboard:dev": "tsx src/dashboard.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,12 +18,14 @@
     "@modelcontextprotocol/sdk": "^1.6.0",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
+    "ethers": "^6.16.0",
     "express": "^4.21.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.4",
     "ts-node": "^10.9.2",
+    "tsx": "^4.22.3",
     "typescript": "^5.7.3"
   }
 }

@@ -1,0 +1,1023 @@
+[
+  {
+    "repo": "KyberNetwork/elizaos-plugin-kyberswap",
+    "url": "https://github.com/KyberNetwork/elizaos-plugin-kyberswap",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:15.956Z",
+    "issueUrl": "https://github.com/KyberNetwork/elizaos-plugin-kyberswap/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "hyperd-ai/plugin-hyperd",
+    "url": "https://github.com/hyperd-ai/plugin-hyperd",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:19.504Z",
+    "issueUrl": "https://github.com/hyperd-ai/plugin-hyperd/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "Aigen-Protocol/plugin-safeagent",
+    "url": "https://github.com/Aigen-Protocol/plugin-safeagent",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:23.014Z",
+    "issueUrl": "https://github.com/Aigen-Protocol/plugin-safeagent/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "vjshaw/plugin-nulucre",
+    "url": "https://github.com/vjshaw/plugin-nulucre",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:26.434Z",
+    "issueUrl": "https://github.com/vjshaw/plugin-nulucre/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "axonfi/plugin-elizaos",
+    "url": "https://github.com/axonfi/plugin-elizaos",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:29.898Z",
+    "issueUrl": "https://github.com/axonfi/plugin-elizaos/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "eli5-claw/elizaos-bankr-plugin",
+    "url": "https://github.com/eli5-claw/elizaos-bankr-plugin",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:33.347Z",
+    "issueUrl": "https://github.com/eli5-claw/elizaos-bankr-plugin/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "erdGeclaw/plugin-base-signals",
+    "url": "https://github.com/erdGeclaw/plugin-base-signals",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:36.782Z",
+    "issueUrl": "https://github.com/erdGeclaw/plugin-base-signals/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "WarTech9/clawswap-sdk",
+    "url": "https://github.com/WarTech9/clawswap-sdk",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:48:46.732Z",
+    "issueUrl": "https://github.com/WarTech9/clawswap-sdk/issues/3",
+    "notified_live": true
+  },
+  {
+    "repo": "alsk1992/CloddsBot",
+    "url": "https://github.com/alsk1992/CloddsBot",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:49:09.675Z",
+    "issueUrl": "https://github.com/alsk1992/CloddsBot/issues/39",
+    "notified_live": true
+  },
+  {
+    "repo": "anthonysurfermx/Bobby-Agent-Trader",
+    "url": "https://github.com/anthonysurfermx/Bobby-Agent-Trader",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:49:13.081Z",
+    "issueUrl": "https://github.com/anthonysurfermx/Bobby-Agent-Trader/issues/9",
+    "notified_live": true
+  },
+  {
+    "repo": "ajanaku1/paygentic-arena",
+    "url": "https://github.com/ajanaku1/paygentic-arena",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:49:16.564Z",
+    "issueUrl": "https://github.com/ajanaku1/paygentic-arena/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "MCPVOT/MCPVOTS",
+    "url": "https://github.com/MCPVOT/MCPVOTS",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:49:20.017Z",
+    "issueUrl": "https://github.com/MCPVOT/MCPVOTS/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "Phatqq/maikers-mainframe-sdk",
+    "url": "https://github.com/Phatqq/maikers-mainframe-sdk",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:51:24.851Z"
+  },
+  {
+    "repo": "elizaOS/eliza",
+    "url": "https://github.com/elizaOS/eliza",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:28.121Z",
+    "issueUrl": "https://github.com/elizaOS/eliza/issues/7748",
+    "notified_live": true
+  },
+  {
+    "repo": "milady-ai/milady",
+    "url": "https://github.com/milady-ai/milady",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:31.563Z",
+    "issueUrl": "https://github.com/milady-ai/milady/issues/2154",
+    "notified_live": true
+  },
+  {
+    "repo": "evidai/agent-payment-mcp",
+    "url": "https://github.com/evidai/agent-payment-mcp",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:35.025Z",
+    "issueUrl": "https://github.com/evidai/agent-payment-mcp/issues/7",
+    "notified_live": true
+  },
+  {
+    "repo": "kawacukennedy/kuberna-labs",
+    "url": "https://github.com/kawacukennedy/kuberna-labs",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:38.479Z",
+    "issueUrl": "https://github.com/kawacukennedy/kuberna-labs/issues/5",
+    "notified_live": true
+  },
+  {
+    "repo": "sailorpepe/plugin-undesirables",
+    "url": "https://github.com/sailorpepe/plugin-undesirables",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:41.986Z",
+    "issueUrl": "https://github.com/sailorpepe/plugin-undesirables/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "flipcoin-fun/eliza-plugin-flipcoin",
+    "url": "https://github.com/flipcoin-fun/eliza-plugin-flipcoin",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:45.413Z",
+    "issueUrl": "https://github.com/flipcoin-fun/eliza-plugin-flipcoin/issues/14",
+    "notified_live": true
+  },
+  {
+    "repo": "casematelabs/holdfastprotocol-eliza-plugin",
+    "url": "https://github.com/casematelabs/holdfastprotocol-eliza-plugin",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:48.894Z",
+    "issueUrl": "https://github.com/casematelabs/holdfastprotocol-eliza-plugin/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "jimbo530/unruggable-launcher",
+    "url": "https://github.com/jimbo530/unruggable-launcher",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:51:52.413Z",
+    "issueUrl": "https://github.com/jimbo530/unruggable-launcher/issues/6",
+    "notified_live": true
+  },
+  {
+    "repo": "ChainSupport/eliza-plugin-dot",
+    "url": "https://github.com/ChainSupport/eliza-plugin-dot",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:02.368Z",
+    "issueUrl": "https://github.com/ChainSupport/eliza-plugin-dot/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "paladinfi/eliza-plugin-trust",
+    "url": "https://github.com/paladinfi/eliza-plugin-trust",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:12.622Z",
+    "issueUrl": "https://github.com/paladinfi/eliza-plugin-trust/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "ELOMEC/OnLeash",
+    "url": "https://github.com/ELOMEC/OnLeash",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:29.368Z",
+    "issueUrl": "https://github.com/ELOMEC/OnLeash/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Samuel-Chuku/Onchain_Agents",
+    "url": "https://github.com/Samuel-Chuku/Onchain_Agents",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:32.828Z",
+    "issueUrl": "https://github.com/Samuel-Chuku/Onchain_Agents/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Boopi7/defi-yield-optimizer",
+    "url": "https://github.com/Boopi7/defi-yield-optimizer",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:36.414Z",
+    "issueUrl": "https://github.com/Boopi7/defi-yield-optimizer/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "PaulElisha/mantle-ai-plugin",
+    "url": "https://github.com/PaulElisha/mantle-ai-plugin",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:39.865Z",
+    "issueUrl": "https://github.com/PaulElisha/mantle-ai-plugin/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Yash7426/SeiTrage",
+    "url": "https://github.com/Yash7426/SeiTrage",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:49.947Z",
+    "issueUrl": "https://github.com/Yash7426/SeiTrage/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Skate-Org/skate-goat",
+    "url": "https://github.com/Skate-Org/skate-goat",
+    "framework": "GOAT SDK",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:53.385Z",
+    "issueUrl": "https://github.com/Skate-Org/skate-goat/issues/5",
+    "notified_live": true
+  },
+  {
+    "repo": "rollendxavier/goat-sdk-coingecko",
+    "url": "https://github.com/rollendxavier/goat-sdk-coingecko",
+    "framework": "GOAT SDK",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:52:56.891Z",
+    "issueUrl": "https://github.com/rollendxavier/goat-sdk-coingecko/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Floe-Labs/agentkit-actions",
+    "url": "https://github.com/Floe-Labs/agentkit-actions",
+    "framework": "Coinbase AgentKit",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:07.173Z",
+    "issueUrl": "https://github.com/Floe-Labs/agentkit-actions/issues/26"
+  },
+  {
+    "repo": "DelleonMcglone/MantuaAI",
+    "url": "https://github.com/DelleonMcglone/MantuaAI",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:10.675Z",
+    "issueUrl": "https://github.com/DelleonMcglone/MantuaAI/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "QuantOracledev/quantoracle",
+    "url": "https://github.com/QuantOracledev/quantoracle",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:20.836Z",
+    "issueUrl": "https://github.com/QuantOracledev/quantoracle/issues/12",
+    "notified_live": true
+  },
+  {
+    "repo": "AgentsKit-io/agentskit",
+    "url": "https://github.com/AgentsKit-io/agentskit",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:24.348Z",
+    "issueUrl": "https://github.com/AgentsKit-io/agentskit/issues/865",
+    "notified_live": true
+  },
+  {
+    "repo": "Floe-Labs/floe-mcp-server",
+    "url": "https://github.com/Floe-Labs/floe-mcp-server",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:27.819Z",
+    "issueUrl": "https://github.com/Floe-Labs/floe-mcp-server/issues/18"
+  },
+  {
+    "repo": "palpalani/agentkit-bayengage",
+    "url": "https://github.com/palpalani/agentkit-bayengage",
+    "framework": "Coinbase AgentKit",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:31.498Z",
+    "issueUrl": "https://github.com/palpalani/agentkit-bayengage/issues/230",
+    "notified_live": true
+  },
+  {
+    "repo": "scalekit-developers/litellm-agentkit-inbox-triage",
+    "url": "https://github.com/scalekit-developers/litellm-agentkit-inbox-triage",
+    "framework": "Coinbase AgentKit",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:34.984Z",
+    "issueUrl": "https://github.com/scalekit-developers/litellm-agentkit-inbox-triage/issues/4",
+    "notified_live": true
+  },
+  {
+    "repo": "carbonsteward/grid402",
+    "url": "https://github.com/carbonsteward/grid402",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:38.486Z",
+    "issueUrl": "https://github.com/carbonsteward/grid402/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "Lory97/tag-per-track-agentkit",
+    "url": "https://github.com/Lory97/tag-per-track-agentkit",
+    "framework": "Coinbase AgentKit",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:41.920Z",
+    "issueUrl": "https://github.com/Lory97/tag-per-track-agentkit/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "ioannisCC/triage-hackathon",
+    "url": "https://github.com/ioannisCC/triage-hackathon",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:45.370Z",
+    "issueUrl": "https://github.com/ioannisCC/triage-hackathon/issues/3",
+    "notified_live": true
+  },
+  {
+    "repo": "forgingblock/forgingblock-agentkit",
+    "url": "https://github.com/forgingblock/forgingblock-agentkit",
+    "framework": "Coinbase AgentKit",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:48.791Z",
+    "issueUrl": "https://github.com/forgingblock/forgingblock-agentkit/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "siddhantthegts/agent0",
+    "url": "https://github.com/siddhantthegts/agent0",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:53:59.022Z",
+    "issueUrl": "https://github.com/siddhantthegts/agent0/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "tracer12kenji46/x402-stablecoin",
+    "url": "https://github.com/tracer12kenji46/x402-stablecoin",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:54:02.494Z"
+  },
+  {
+    "repo": "wkalidev/base2stacks-tracker",
+    "url": "https://github.com/wkalidev/base2stacks-tracker",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:05.727Z",
+    "issueUrl": "https://github.com/wkalidev/base2stacks-tracker/issues/13"
+  },
+  {
+    "repo": "printmoneylab/x402watch",
+    "url": "https://github.com/printmoneylab/x402watch",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:09.179Z",
+    "issueUrl": "https://github.com/printmoneylab/x402watch/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "soladdev/dextra-app",
+    "url": "https://github.com/soladdev/dextra-app",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:12.666Z",
+    "issueUrl": "https://github.com/soladdev/dextra-app/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "toreva/kit",
+    "url": "https://github.com/toreva/kit",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:16.121Z",
+    "issueUrl": "https://github.com/toreva/kit/issues/14",
+    "notified_live": true
+  },
+  {
+    "repo": "venumhq/solana-venum-sdk",
+    "url": "https://github.com/venumhq/solana-venum-sdk",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:19.618Z",
+    "issueUrl": "https://github.com/venumhq/solana-venum-sdk/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "venumhq/solana-venum-cli",
+    "url": "https://github.com/venumhq/solana-venum-cli",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:23.117Z",
+    "issueUrl": "https://github.com/venumhq/solana-venum-cli/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "edycutjong/BagOS",
+    "url": "https://github.com/edycutjong/BagOS",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:26.633Z",
+    "issueUrl": "https://github.com/edycutjong/BagOS/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "connectwilson/AgentRail",
+    "url": "https://github.com/connectwilson/AgentRail",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:30.117Z",
+    "issueUrl": "https://github.com/connectwilson/AgentRail/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "shieldspprt/solhunt-recovery",
+    "url": "https://github.com/shieldspprt/solhunt-recovery",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:54:40.215Z",
+    "issueUrl": "https://github.com/shieldspprt/solhunt-recovery/issues/3",
+    "notified_live": true
+  },
+  {
+    "repo": "Jennierectile11/pumpfun-memecoin-sniper",
+    "url": "https://github.com/Jennierectile11/pumpfun-memecoin-sniper",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:54:43.648Z"
+  },
+  {
+    "repo": "markgbkkj/hyperliquid-trading-agent",
+    "url": "https://github.com/markgbkkj/hyperliquid-trading-agent",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:54:46.892Z"
+  },
+  {
+    "repo": "nicosmall503/merx-mcp",
+    "url": "https://github.com/nicosmall503/merx-mcp",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:54:50.146Z"
+  },
+  {
+    "repo": "arfandi453/web3-daily-digest",
+    "url": "https://github.com/arfandi453/web3-daily-digest",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:54:53.404Z"
+  },
+  {
+    "repo": "DanielSantos45/agentinu",
+    "url": "https://github.com/DanielSantos45/agentinu",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:54:56.880Z"
+  },
+  {
+    "repo": "dwana1/golang-skills",
+    "url": "https://github.com/dwana1/golang-skills",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:00.132Z"
+  },
+  {
+    "repo": "grijinha/solana-dapp",
+    "url": "https://github.com/grijinha/solana-dapp",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:03.365Z"
+  },
+  {
+    "repo": "mission69b/t2000",
+    "url": "https://github.com/mission69b/t2000",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:55:06.600Z",
+    "issueUrl": "https://github.com/mission69b/t2000/issues/82",
+    "notified_live": true
+  },
+  {
+    "repo": "szhygulin/vaultpilot-mcp-gsd-inspired",
+    "url": "https://github.com/szhygulin/vaultpilot-mcp-gsd-inspired",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:55:10.100Z",
+    "issueUrl": "https://github.com/szhygulin/vaultpilot-mcp-gsd-inspired/issues/40",
+    "notified_live": true
+  },
+  {
+    "repo": "Aigen-Protocol/aigen-protocol",
+    "url": "https://github.com/Aigen-Protocol/aigen-protocol",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:55:20.233Z",
+    "issueUrl": "https://github.com/Aigen-Protocol/aigen-protocol/issues/6",
+    "notified_live": true
+  },
+  {
+    "repo": "feliciaksantana17/JuniorMemSys-Suite",
+    "url": "https://github.com/feliciaksantana17/JuniorMemSys-Suite",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:23.741Z"
+  },
+  {
+    "repo": "extentadulthood280/spraay-payments",
+    "url": "https://github.com/extentadulthood280/spraay-payments",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:26.972Z"
+  },
+  {
+    "repo": "Excaliber9271/asterdex-mcp-server",
+    "url": "https://github.com/Excaliber9271/asterdex-mcp-server",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:30.221Z"
+  },
+  {
+    "repo": "KhanhHuy1405/philidor-mcp",
+    "url": "https://github.com/KhanhHuy1405/philidor-mcp",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:33.475Z"
+  },
+  {
+    "repo": "oceantruong/farcaster-agent",
+    "url": "https://github.com/oceantruong/farcaster-agent",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:36.726Z"
+  },
+  {
+    "repo": "mitsou55/100-GitHub-Projects-That-Defined-2025",
+    "url": "https://github.com/mitsou55/100-GitHub-Projects-That-Defined-2025",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:39.976Z"
+  },
+  {
+    "repo": "Uncaulked-prefect97/broker-as-a-service",
+    "url": "https://github.com/Uncaulked-prefect97/broker-as-a-service",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:50.276Z"
+  },
+  {
+    "repo": "menorhge3556/Crypto_MCP_Server",
+    "url": "https://github.com/menorhge3556/Crypto_MCP_Server",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T12:55:53.518Z"
+  },
+  {
+    "repo": "shanevcantwell/llauncher",
+    "url": "https://github.com/shanevcantwell/llauncher",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:55:56.772Z",
+    "issueUrl": "https://github.com/shanevcantwell/llauncher/issues/68",
+    "notified_live": true
+  },
+  {
+    "repo": "pterchan/Clap",
+    "url": "https://github.com/pterchan/Clap",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:00.326Z",
+    "issueUrl": "https://github.com/pterchan/Clap/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "themonk-dev/mcp-toolkit",
+    "url": "https://github.com/themonk-dev/mcp-toolkit",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:03.770Z",
+    "issueUrl": "https://github.com/themonk-dev/mcp-toolkit/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "ashlrai/phantom-secrets",
+    "url": "https://github.com/ashlrai/phantom-secrets",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:07.226Z",
+    "issueUrl": "https://github.com/ashlrai/phantom-secrets/issues/69",
+    "notified_live": true
+  },
+  {
+    "repo": "Haiku-Trading/haiku-mcp-server",
+    "url": "https://github.com/Haiku-Trading/haiku-mcp-server",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:10.711Z",
+    "issueUrl": "https://github.com/Haiku-Trading/haiku-mcp-server/issues/18",
+    "notified_live": true
+  },
+  {
+    "repo": "pipeworx-io/mcp-swapi",
+    "url": "https://github.com/pipeworx-io/mcp-swapi",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:14.247Z",
+    "issueUrl": "https://github.com/pipeworx-io/mcp-swapi/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "alexchenai/chenswap-mcp",
+    "url": "https://github.com/alexchenai/chenswap-mcp",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:17.722Z",
+    "issueUrl": "https://github.com/alexchenai/chenswap-mcp/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "vultisig/vultisig-sdk",
+    "url": "https://github.com/vultisig/vultisig-sdk",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:27.929Z",
+    "issueUrl": "https://github.com/vultisig/vultisig-sdk/issues/476",
+    "notified_live": true
+  },
+  {
+    "repo": "Alyymx/comPi",
+    "url": "https://github.com/Alyymx/comPi",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:31.444Z",
+    "issueUrl": "https://github.com/Alyymx/comPi/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "mpprouter/stellar-agent-wallet-skill",
+    "url": "https://github.com/mpprouter/stellar-agent-wallet-skill",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:34.893Z",
+    "issueUrl": "https://github.com/mpprouter/stellar-agent-wallet-skill/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "gate/gate-dex-cli",
+    "url": "https://github.com/gate/gate-dex-cli",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:38.463Z",
+    "issueUrl": "https://github.com/gate/gate-dex-cli/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "dev-analyshd/trion-uniswap-agent",
+    "url": "https://github.com/dev-analyshd/trion-uniswap-agent",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:41.980Z",
+    "issueUrl": "https://github.com/dev-analyshd/trion-uniswap-agent/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "gate/gate-wallet-cli",
+    "url": "https://github.com/gate/gate-wallet-cli",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:45.415Z",
+    "issueUrl": "https://github.com/gate/gate-wallet-cli/issues/11",
+    "notified_live": true
+  },
+  {
+    "repo": "debridge-finance/debridge-mcp",
+    "url": "https://github.com/debridge-finance/debridge-mcp",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:48.933Z",
+    "issueUrl": "https://github.com/debridge-finance/debridge-mcp/issues/15",
+    "notified_live": true
+  },
+  {
+    "repo": "BastianMIllan/UNIAGENT",
+    "url": "https://github.com/BastianMIllan/UNIAGENT",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T12:56:52.483Z",
+    "issueUrl": "https://github.com/BastianMIllan/UNIAGENT/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "milady-ai/.github",
+    "url": "https://github.com/milady-ai/.github",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:09:55.744Z",
+    "issueUrl": "https://github.com/milady-ai/.github/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "milady-ai/brandkit",
+    "url": "https://github.com/milady-ai/brandkit",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:09:59.261Z",
+    "issueUrl": "https://github.com/milady-ai/brandkit/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "milady-ai/plugin-bsc-memes",
+    "url": "https://github.com/milady-ai/plugin-bsc-memes",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:10:02.782Z",
+    "issueUrl": "https://github.com/milady-ai/plugin-bsc-memes/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "nirholas/universal-crypto-mcp",
+    "url": "https://github.com/nirholas/universal-crypto-mcp",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:12.394Z",
+    "issueUrl": "https://github.com/nirholas/universal-crypto-mcp/issues/31",
+    "notified_live": true
+  },
+  {
+    "repo": "fino-oss/autoswap",
+    "url": "https://github.com/fino-oss/autoswap",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:15.897Z",
+    "issueUrl": "https://github.com/fino-oss/autoswap/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "thebuilderslab/projecT87",
+    "url": "https://github.com/thebuilderslab/projecT87",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:19.327Z",
+    "issueUrl": "https://github.com/thebuilderslab/projecT87/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "gobeyondfj-cmd/cryptoagent-ai",
+    "url": "https://github.com/gobeyondfj-cmd/cryptoagent-ai",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:22.815Z",
+    "issueUrl": "https://github.com/gobeyondfj-cmd/cryptoagent-ai/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "unleashedbelial/owockibot-leaderboard",
+    "url": "https://github.com/unleashedbelial/owockibot-leaderboard",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:33.248Z",
+    "issueUrl": "https://github.com/unleashedbelial/owockibot-leaderboard/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "hit7z/openclaw-acp",
+    "url": "https://github.com/hit7z/openclaw-acp",
+    "framework": "AI Agent Framework",
+    "status": "error",
+    "timestamp": "2026-05-16T14:11:36.768Z"
+  },
+  {
+    "repo": "Vexorterminal0111/vexor-terminal",
+    "url": "https://github.com/Vexorterminal0111/vexor-terminal",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:40.016Z",
+    "issueUrl": "https://github.com/Vexorterminal0111/vexor-terminal/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "dexmac221/C64AIToolChain",
+    "url": "https://github.com/dexmac221/C64AIToolChain",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:43.520Z",
+    "issueUrl": "https://github.com/dexmac221/C64AIToolChain/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "2654-zed/latent-flux",
+    "url": "https://github.com/2654-zed/latent-flux",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:47.197Z",
+    "issueUrl": "https://github.com/2654-zed/latent-flux/issues/1"
+  },
+  {
+    "repo": "saltxd/chainward",
+    "url": "https://github.com/saltxd/chainward",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:50.737Z",
+    "issueUrl": "https://github.com/saltxd/chainward/issues/11",
+    "notified_live": true
+  },
+  {
+    "repo": "T-rustdev/T-rustdev-Web3-Portfolio",
+    "url": "https://github.com/T-rustdev/T-rustdev-Web3-Portfolio",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:11:54.248Z",
+    "issueUrl": "https://github.com/T-rustdev/T-rustdev-Web3-Portfolio/issues/34",
+    "notified_live": true
+  },
+  {
+    "repo": "0xDaniellin/L2-Snapshot",
+    "url": "https://github.com/0xDaniellin/L2-Snapshot",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:12:04.270Z",
+    "issueUrl": "https://github.com/0xDaniellin/L2-Snapshot/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "demigodmelodeathspark-blip/CryptoMiningMelodiesparkBot",
+    "url": "https://github.com/demigodmelodeathspark-blip/CryptoMiningMelodiesparkBot",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T14:12:07.763Z",
+    "issueUrl": "https://github.com/demigodmelodeathspark-blip/CryptoMiningMelodiesparkBot/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "tareksabbir/Ollio-Ai",
+    "url": "https://github.com/tareksabbir/Ollio-Ai",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T20:13:25.530Z",
+    "issueUrl": "https://github.com/tareksabbir/Ollio-Ai/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "MoltStation/MS-ShellRunners",
+    "url": "https://github.com/MoltStation/MS-ShellRunners",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-16T20:13:42.257Z",
+    "issueUrl": "https://github.com/MoltStation/MS-ShellRunners/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "sujusalebo/meme-token-screener",
+    "url": "https://github.com/sujusalebo/meme-token-screener",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-17T08:16:51.507Z",
+    "issueUrl": "https://github.com/sujusalebo/meme-token-screener/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "ColonistOne/eliza-gemma",
+    "url": "https://github.com/ColonistOne/eliza-gemma",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-17T14:17:34.675Z",
+    "issueUrl": "https://github.com/ColonistOne/eliza-gemma/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "cipherwork-eng/cipherwork",
+    "url": "https://github.com/cipherwork-eng/cipherwork",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-17T20:20:04.243Z",
+    "issueUrl": "https://github.com/cipherwork-eng/cipherwork/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Roberdan/convergio",
+    "url": "https://github.com/Roberdan/convergio",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-17T20:20:07.967Z",
+    "issueUrl": "https://github.com/Roberdan/convergio/issues/372",
+    "notified_live": true
+  },
+  {
+    "repo": "agio-protocol/agio-protocol",
+    "url": "https://github.com/agio-protocol/agio-protocol",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-17T20:21:24.029Z",
+    "issueUrl": "https://github.com/agio-protocol/agio-protocol/issues/3",
+    "notified_live": true
+  },
+  {
+    "repo": "hammadbtc/nft-mint-bot",
+    "url": "https://github.com/hammadbtc/nft-mint-bot",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-17T20:21:34.163Z",
+    "issueUrl": "https://github.com/hammadbtc/nft-mint-bot/issues/2",
+    "notified_live": true
+  },
+  {
+    "repo": "GMGNAI/gmgn-skills",
+    "url": "https://github.com/GMGNAI/gmgn-skills",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-18T14:26:13.572Z",
+    "issueUrl": "https://github.com/GMGNAI/gmgn-skills/issues/128"
+  },
+  {
+    "repo": "XyncPay/plugin-xyncpay-elizaos",
+    "url": "https://github.com/XyncPay/plugin-xyncpay-elizaos",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-18T20:25:45.982Z",
+    "issueUrl": "https://github.com/XyncPay/plugin-xyncpay-elizaos/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "jimbo530/baselings-mcp",
+    "url": "https://github.com/jimbo530/baselings-mcp",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-19T14:32:37.710Z",
+    "issueUrl": "https://github.com/jimbo530/baselings-mcp/issues/8",
+    "notified_live": true
+  },
+  {
+    "repo": "fortesdev/agent_notary_ethereum",
+    "url": "https://github.com/fortesdev/agent_notary_ethereum",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-19T20:34:16.815Z",
+    "issueUrl": "https://github.com/fortesdev/agent_notary_ethereum/issues/3",
+    "notified_live": true
+  },
+  {
+    "repo": "TheColonyCC/elizaos-plugin",
+    "url": "https://github.com/TheColonyCC/elizaos-plugin",
+    "framework": "ElizaOS",
+    "status": "issue_opened",
+    "timestamp": "2026-05-20T02:33:53.120Z",
+    "issueUrl": "https://github.com/TheColonyCC/elizaos-plugin/issues/14",
+    "notified_live": true
+  },
+  {
+    "repo": "Cyberpaisa/DOF-MESH",
+    "url": "https://github.com/Cyberpaisa/DOF-MESH",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-20T02:35:55.303Z",
+    "issueUrl": "https://github.com/Cyberpaisa/DOF-MESH/issues/114",
+    "notified_live": true
+  },
+  {
+    "repo": "LamboPoewert/plugin-madeonsol",
+    "url": "https://github.com/LamboPoewert/plugin-madeonsol",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-22T22:17:00.481Z",
+    "issueUrl": "https://github.com/LamboPoewert/plugin-madeonsol/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Dev-Herni/defai-gateway",
+    "url": "https://github.com/Dev-Herni/defai-gateway",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-22T22:17:57.596Z",
+    "issueUrl": "https://github.com/Dev-Herni/defai-gateway/issues/1",
+    "notified_live": true
+  },
+  {
+    "repo": "Dev-Herni/defai-gateway-site",
+    "url": "https://github.com/Dev-Herni/defai-gateway-site",
+    "framework": "AI Agent Framework",
+    "status": "issue_opened",
+    "timestamp": "2026-05-22T22:18:01.117Z",
+    "issueUrl": "https://github.com/Dev-Herni/defai-gateway-site/issues/1",
+    "notified_live": true
+  }
+]

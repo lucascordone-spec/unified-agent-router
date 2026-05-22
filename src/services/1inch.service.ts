@@ -1,5 +1,5 @@
 import axios from "axios";
-import { RouteQuote } from "./lifi.service.js";
+import { RouteQuote } from "./types.js";
 
 const ONEINCH_API_URL = "https://api.1inch.dev/swap/v6.0";
 
@@ -14,7 +14,7 @@ export async function get1inchQuote(
     try {
         const apiKey = process.env.ONEINCH_API_KEY;
         if (!apiKey || apiKey === "tu_api_key_de_1inch") {
-            console.log("1inch API key no configurada, ignorando 1inch.");
+            console.warn("ONEINCH_API_KEY is not set. Skipping 1inch aggregator.");
             return null;
         }
 
