@@ -116,7 +116,7 @@ The Dashboard will be available at **`http://localhost:3000`**.
 ### 1. Direct HTTP REST API (SaaS)
 Calculate optimal route and fetch signed payload directly from our public endpoint:
 ```bash
-curl -X POST https://little-earwig-99.loca.lt/route \
+curl -X POST https://lcf-router.loca.lt/route \
   -H "Content-Type: application/json" \
   -d '{
     "fromChainId": 42161,
@@ -150,7 +150,7 @@ const agentKit = await AgentKit.from({
     cdpApiKeyName: process.env.CDP_API_KEY_NAME,
     cdpApiKeyPrivateVal: process.env.CDP_API_KEY_PRIVATE_KEY,
     actionProviders: [
-        ...unifiedRouterActions("https://little-earwig-99.loca.lt")
+        ...unifiedRouterActions("https://lcf-router.loca.lt")
     ],
 });
 ```
