@@ -23,6 +23,31 @@ The **Unified Agent Router** is a production-ready, highly optimized multi-chain
 
 ---
 
+## 🌐 Supported Networks & Fee Wallets
+
+Below is the official list of supported networks and the corresponding fee collection / escrow addresses:
+
+| Network | Chain Type | Address / Identifier |
+| :--- | :--- | :--- |
+| **Ethereum** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Linea** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Base** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **BNB Chain** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **HyperEVM** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Sei** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Polygon** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Monad** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Sonic** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Optimism (OP)** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Arbitrum** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Avalanche** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **ILITY Mainnet** | EVM | `0x8f7670EA615910D0A86320e84A611577F68E3908` |
+| **Bitcoin** | UTXO | `bc1qnte...t5v9n` |
+| **Solana** | SVM | `AfTDDZL...FB78S` |
+| **Tron** | TVM | *Supported (TRX / TRC20 Routing)* |
+
+---
+
 ## 🏗️ High-Level Architecture
 
 The Unified Agent Router abstracts complex DeFi aggregator routing and fee math into a single, centralized public API for AI agents:
