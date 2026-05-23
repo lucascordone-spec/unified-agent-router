@@ -5,3 +5,4 @@ db.json
 recruiter-db.json
 *.log
 .DS_Store
+src/arbitrage-bot.ts
