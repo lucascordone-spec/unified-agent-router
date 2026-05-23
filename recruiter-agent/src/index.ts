@@ -23,9 +23,8 @@ const DB_PATH = path.join(__dirname, "../../recruiter-db.json");
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN!;
-const ROUTER_SMITHERY_URL = "https://smithery.ai/server/@lucascordone-spec/unified-agent-router";
 const ROUTER_GITHUB_URL = "https://github.com/lucascordone-spec/unified-agent-router";
-const MCP_INSTALL_CMD = "npx @smithery/cli install @lucascordone-spec/unified-agent-router --client claude";
+const COLLATERAL_GITHUB_URL = "https://github.com/lucascordone-spec/enso-collateral-api";
 
 // Delay between API calls to avoid rate limiting (ms)
 const DELAY_MS = 3000;
@@ -56,56 +55,86 @@ const TARGET_QUERIES = [
 ];
 
 // Keywords that indicate the agent is doing DeFi operations
-const DEFI_KEYWORDS = ["swap", "bridge", "trade", "defi", "dex", "liquidity", "token", "cross-chain", "arbitrage", "l2", "ethereum"];
+const DEFI_KEYWORDS = ["swap", "bridge", "trade", "defi", "dex", "liquidity", "token", "cross-chain", "arbitrage", "l2", "ethereum", "leverage", "collateral", "borrow", "lending"];
 
 // ─── PITCH TEMPLATE ──────────────────────────────────────────────────────────
 
 function generatePitch(repoName: string, framework: string): string {
-  return `## 🚀 Supercharge your agent with Universal Multi-Chain Routing
+  return `## 🚀 Supercharge your agent with Universal DeFi Routing & Collateral Leverage (100% Fast to Integrate)
 
-Hi! I came across **${repoName}** and noticed it performs DeFi operations. I wanted to share a tool that provides **Universal Multi-Chain Support** across all EVM networks (**Ethereum, BSC, Polygon, Avalanche, Arbitrum, Base, Optimism**) that could significantly improve route quality and save gas for your users.
+Hi! I came across **${repoName}** and noticed it performs DeFi operations. I wanted to share our suite of **zero-configuration DeFi tools** built specifically for AI agents that take **under 2 minutes to integrate** and can significantly improve transaction efficiency, route prices, and gas costs for your users:
 
-### What is it?
+### 1️⃣ [Unified Agent Router](${ROUTER_GITHUB_URL}) (DEX & Bridge Routing)
+Exposes optimal swap/bridge routing across **1inch**, **Jupiter**, and **LI.FI** in parallel (EVM & Solana).
+* **⚡ Parallel Route Optimization:** Compares quotes under 4 seconds.
+* **🌐 Cross-Chain Bridges:** Seamlessly bridge assets across 14+ chains.
+* **💰 Protocol Monetization:** Standard 0.02% fee built-in for agent operators.
+* **🔌 Zero-Config ElizaOS Plugin & Smithery MCP Server.**
 
-**[Unified Agent Router](${ROUTER_GITHUB_URL})** is an MCP server that aggregates **1inch** and **Rango Exchange** simultaneously, always returning the best available route across **14+ blockchains and bridges**.
-
-### Why it matters for your agent
-
-Instead of relying on a single network or aggregator, your agent would:
-- ✅ Query **1inch + Rango** in parallel with a single tool call
-- ✅ Automatically select the **best price** across all major EVM chains
-- ✅ Support for **Cross-Chain Bridges** out of the box
-- ✅ Get **transaction-ready calldata** — no extra steps
-- ✅ **0.02% Protocol Fee** logic built-in for sustainable agent development
-
-### Integration (takes ~2 minutes)
-
-Your agent can request optimal cross-chain routes directly via our centralized API:
-
-**Example Request:**
-\`\`\`bash
-curl -X POST https://little-earwig-99.loca.lt/route \\
--H "Content-Type: application/json" \\
--d '{
-  "fromChainId": 42161,
-  "toChainId": 42161,
-  "fromToken": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
-  "toToken": "0x82af49447d8a07e3bd95bd0d56f352415231caa1",
-  "amount": "1000000",
-  "userAddress": "YOUR_WALLET_ADDRESS"
-}'
-\`\`\`
-
-**Option B — ${framework} integration:**
-You can just execute a standard \`fetch\` request inside your action handler to get the best quote and transaction payload instantly.
-
-### Links
-- 🔗 GitHub: ${ROUTER_GITHUB_URL}
-
-Happy to answer any questions or help with integration in the Milady/Eliza ecosystem. Would this be useful for your project?
+### 2️⃣ [Enso Collateral Gateway](${COLLATERAL_GITHUB_URL}) (Atomic Collateral Leverage)
+Enables agents to build and dismantle leveraged yield/lending positions (Aave V3) atomically using **Flash Loans** without deploying contracts.
+* **⚡ Atomic Flash Loan Loop:** Borrow, Swap, Deposit, and Repay in a single block.
+* **💰 Custom Monetization:** Standard 0.1% fee built-in.
+* **🔌 Pre-built ElizaOS plugin & MCP tool ready to run.**
 
 ---
-*This is an automated outreach from the Unified Agent Router project. If this is not relevant to your project, feel free to close this issue.*`;
+
+### 🛠️ Quick Integration (Under 2 Minutes)
+
+If your agent is written in **${framework}** (or standard TypeScript/Node.js), you can integrate either tool instantly:
+
+#### Option A: Direct REST API (Returns Transaction-Ready Calldata)
+Get swap/bridge routing:
+\`\`\`bash
+curl -X POST http://localhost:3000/route \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "fromChainId": 42161,
+    "toChainId": 42161,
+    "fromTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+    "toTokenAddress": "0x82af49447d8a07e3bd95bd0d56f352415231caa1",
+    "amount": "100000000",
+    "userAddress": "YOUR_WALLET_ADDRESS"
+  }'
+\`\`\`
+
+Get atomic flash loan leverage (Enso Gateway):
+\`\`\`bash
+curl -X POST http://localhost:3001/api/v1/build-collateral \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "chainId": 42161,
+    "userAddress": "YOUR_WALLET_ADDRESS",
+    "tokenToDeposit": "0x82af49447d8a07e3bd95bd0d56f352415231caa1",
+    "tokenToBorrow": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+    "amount": "1000000000000000000",
+    "leverageMultiplier": 3
+  }'
+\`\`\`
+
+#### Option B: Zero-Config MCP Tool (Cursor/Claude Desktop/Windsurf)
+Add the server configurations directly to your Agent Client to give it instant access to both tools:
+\`\`\`json
+{
+  "mcpServers": {
+    "unified-agent-router": {
+      "command": "node",
+      "args": ["/path/to/unified-agent-router/dist/index.js"]
+    },
+    "enso-collateral": {
+      "command": "node",
+      "args": ["/path/to/enso-collateral-api/packages/mcp-server/dist/index.js"]
+    }
+  }
+}
+\`\`\`
+
+---
+
+Happy to assist with the integration or help customize the fees for your team. Would this be useful for **${repoName}**?
+
+---
+*This is an automated outreach from the LCF IA Finanzas project. If this is not relevant, feel free to close this issue.*`;
 }
 
 // ─── DATABASE ─────────────────────────────────────────────────────────────────
