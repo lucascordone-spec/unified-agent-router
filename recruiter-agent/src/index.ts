@@ -61,7 +61,16 @@ const TARGET_QUERIES = [
   "yield farming bot",
   "flash loan arbitrage bot",
   "monad swap bot",
-  "berachain bot"
+  "berachain bot",
+  // High-Volume Target Queries
+  "virtuals-protocol language:TypeScript",
+  "aixbt language:TypeScript",
+  "eliza-trading-bot language:TypeScript",
+  "meme-sniper-eliza",
+  "zyfai",
+  "automated-yield-agent",
+  "active-trading-agent",
+  "high-frequency-defi-agent"
 ];
 
 // Keywords that indicate the agent is doing DeFi operations
